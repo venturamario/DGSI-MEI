@@ -2,7 +2,9 @@
 Material for the DGSI subject for the MEI master (UPC)
 
 Computer Science Masters (UPC - DGSI - MEI)
+
 Owners: Mario Ventura Burgos & Moritz Hohne
+
 February 2025
 
 # Basic Video Player
@@ -30,3 +32,5 @@ Asegúrate de que tu navegador sea compatible con HTML5 y tenga soporte para la 
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, siéntete libre de hacer un fork y enviar un pull request.
+
+February 2025
