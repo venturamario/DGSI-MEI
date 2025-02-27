@@ -239,7 +239,31 @@ La colección de la Facultat d'Informàtica recoge y presenta la historia de la 
 Se llega a la conclusión de que no es una buena herramienta por los problemas y complicaciones que da al necesitar modificaciones de variables de entorno del sistema.
 
 # Script Python
+The results can be found in website_content.md and the script in md_test.py.
 
+## Setup and Initialization:
+
+The script uses Selenium WebDriver to open the main website (https://www.fib.upc.edu/) in a Chrome browser.
+It runs with headless mode disabled, meaning the browser window will be visible during scraping.
+
+## Extracting Links:
+
+The script scrapes all links (<a> tags with href attributes) from the main page of the website using BeautifulSoup.
+It resolves these links into absolute URLs using the urljoin function, so it can scrape them properly.
+
+## Scraping Content:
+
+For the main page and each link found, the script uses the requests library to fetch the HTML content.
+It then converts the fetched HTML into Markdown format using the markdownify library.
+
+## Retry Mechanism:
+
+In case of timeouts or connection errors, the script retries up to 3 times with a 5-second delay between each attempt.
+If a URL cannot be fetched after all retries, the script returns an error message for that URL.
+
+## Saving the Data:
+
+All Markdown-converted content (from the main page and the links) is saved into a file named website_content.md.
 
 # urltomarkdown.com
 
