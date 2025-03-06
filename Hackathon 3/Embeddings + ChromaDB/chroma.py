@@ -3,6 +3,8 @@
 # Hackathon 3
 # =============================================================================================
 
+NUM_RESULTS = 10
+
 # create a chroma client
 import chromadb
 chroma_client = chromadb.Client()
@@ -22,7 +24,7 @@ collection.add(
 # query the collection
 results = collection.query(
     query_texts=["This is a query document about hawaii"], # Chroma will embed this for you
-    n_results=2 # how many results to return
+    n_results = NUM_RESULTS # how many results to return
 )
 print(results)
 
